@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+
+  web:
+    build: 
+      context: "."
+    volumes:
+      - ./:/usr/share/nginx/html
+    ports:
+      - "8091:80"
+    logging:
+      options:
+        max-size: 50m
+
+     
